@@ -1,3 +1,4 @@
+![University of Rochester Logo; Meliora.](/docs/images/logo.png)
 # I2B2, Redcap, Excel, Data-Dictionary Integrations
 Welcome to our i2b2 integration system, developed at the University of Rochester.
 In this document you will find information of how data is structured differently at our institution, how to install the tools, what items need customization, and a general understanding of the utilities supplied by the system.
