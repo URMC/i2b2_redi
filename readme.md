@@ -1,17 +1,17 @@
-#I2B2, Redcap, Excel, Data-Dictionary Integrations
+# I2B2, Redcap, Excel, Data-Dictionary Integrations
 Welcome to our i2b2 integration system, developed at the University of Rochester.
 In this document you will find information of how data is structured differently at our institution, how to install the tools, what items need customization, and a general understanding of the utilities supplied by the system.
 In short, our integration work is as follows:
-*i2b2 communicates with an external schema that stores jobs, logs, study specific data
-*This external schema supports a Wordpress based web site that allows for 
-**study management, 
-**single-sign-on capability, 
-**data mart creation and management
-**patient list management and re-identification 
-**administrative features.
-*Another external schema that supports EAV file storage for analysis and staging space for dynamic data pulls after pivoting data,
+* i2b2 communicates with an external schema that stores jobs, logs, study specific data
+* This external schema supports a Wordpress based web site that allows for 
+** study management, 
+** single-sign-on capability, 
+** data mart creation and management
+** patient list management and re-identification 
+** administrative features.
+* Another external schema that supports EAV file storage for analysis and staging space for dynamic data pulls after pivoting data,
 
-#Intended Audience
+# Intended Audience
 This document was written for an i2b2 systems administrator/developer interested in leveraging URMC's REDCap and other integration tools within their institutions.
 
 # Design Decision / Action Item
@@ -22,6 +22,6 @@ This is described in the diagram below.
 ![Master Systems Diagram](/docs/images/msd.png)
 
 Our tool set is capable of running without these integrations for purposes of REDCap and Excel extractions. Your institution may choose not to implement data mart provisioning in this manner. The immediate drawbacks to this design is as follows:
-#A single Java service running DBA commands, modifying i2b2 running xml files.
-##None of our data marts or customers have access to our database access, they cannot see other studies' data. 
-##All data is funneled into the standard i2b2 observation structure (observation_fact) or local_observation_fact, which can reside on a different server.
+* A single Java service running DBA commands, modifying i2b2 running xml files.
+** None of our data marts or customers have access to our database access, they cannot see other studies' data. 
+** All data is funneled into the standard i2b2 observation structure (observation_fact) or local_observation_fact, which can reside on a different server.
