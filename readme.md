@@ -4,11 +4,11 @@ Welcome to our i2b2 integration system, developed at the University of Rochester
 In this document you will find information of how data is structured differently at our institution, how to install the tools, what items need customization, and a general understanding of the utilities supplied by the system.
 
 # Current Task List
-[X] Publish to open source platform under MIT license.
-[ ] Move to 1.7.08 manifest installation
-[ ] Create binary "get-up-and-go" install
-[ ] Migrate to MsSQL and Postgres compatibility.
-[ ] Create manual install guide.
+- [X] Publish to open source platform under MIT license.
+- [ ] Move to 1.7.08 manifest installation
+- [ ] Create binary "get-up-and-go" install
+- [ ] Migrate to MsSQL and Postgres compatibility.
+- [ ] Create manual install guide.
 
 In short, our integration work is as follows:
 * i2b2 communicates with an external schema that stores jobs, logs, study specific data
