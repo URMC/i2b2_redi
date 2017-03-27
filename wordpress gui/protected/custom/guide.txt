@@ -1,0 +1,15 @@
+This section is to display custom item level customizations to the section window when selected.
+
+The file must be named exactly how the table name is to appear within i2b2's table access.
+
+You'll be passed an XML variable in the field $selected_item_options.
+
+the variables generated will be saved automatically by the studiessave.php page, if the variables are named:
+
+	CUSTOM_SECTION_ITEM_ $item->C_TABLE_CD .
+
+thus i2b2_FLOW's data, to save the ID 12 would be 
+
+CUSTOM_SECTION_ITEM_i2b2_FLOW_12.
+
+This is then encoded into the XML in this field.

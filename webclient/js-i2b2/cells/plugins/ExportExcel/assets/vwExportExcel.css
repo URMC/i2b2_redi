@@ -1,0 +1,276 @@
+/**
+ * @projectDescription	i2b2 Excel Export Plugin 
+ * @inherits			i2b2
+ * @namespace			i2b2.ExportExcel
+ * @author				Axel Newe
+ * ----------------------------------------------------------------------------------------
+ * updated 2013-01-09: Initial Launch [Axel Newe, FAU Erlangen-Nuremberg] 
+ */
+
+/*** CSS for main plugin wrapper ***/
+
+DIV#ExportExcel-mainDiv {
+	padding: 0px;
+}
+
+
+/*** CSS for tab background ***/
+
+DIV#ExportExcel-TABS DIV.yui-content {
+	background: #FFF;
+}
+
+DIV#ExportExcel-TABS DIV.ExportExcel-MainContent {
+    background:#FFF;
+    border:solid #63758C;
+    border-width:1px 0;
+    overflow:auto;
+    height:100%;
+}
+DIV#ExportExcel-TABS DIV.ExportExcel-MainContentPad {
+	padding:10px 10px;
+    text-align:justify;
+	vertical-align:baseline;
+}
+DIV#ExportExcel-TABS DIV.ExportExcel-MainContentPad  .inlineimg {
+	vertical-align:middle;
+}
+
+
+/*** CSS for the Specify Data tab ***/
+
+DIV#ExportExcel-mainDiv DIV.lbl {
+	padding: 6px 0px;
+	width:80px;
+	text-align:right;
+	float: left;
+	font-weight:bold;
+	color:#666;
+	margin: 15px 10px 0px 0px;
+
+	/*
+	padding: 6px 0px;
+	width:80px;
+	text-align:right;
+	float: left;
+	font-weight:bold;
+	color:#666;
+	margin: 15px 10px 0px 0px;
+	white-space:nowrap;
+	*/
+}
+DIV#ExportExcel-mainDiv DIV.droptrgtlbl {
+	padding: 6px 0px;
+	width:100px;
+	text-align:right;
+	float: left;
+	font-weight:bold;
+	color:#666;
+	margin: 15px 10px 0px 0px;
+}
+DIV#ExportExcel-mainDiv DIV.droptrgt {
+	padding: 0;
+	background: #DEEBEF;
+	margin-top: 0px;
+	text-align:left;
+	border: 1px solid #63758C;
+	width:320px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+DIV#ExportExcel-mainDiv #ExportExcel-PRSDROP {
+	padding: 5px 10px;
+	overflow:hidden;
+	white-space:nowrap;
+	width:300px;
+}
+DIV#ExportExcel-mainDiv DIV.droptrgt .concptItem {
+	padding: 5px 10px;
+	overflow:hidden;
+	white-space:nowrap;
+	display:block;
+	color:#000;
+	text-decoration:none;
+}
+DIV#ExportExcel-mainDiv DIV.droptrgt .concptItem:hover {
+	background-color:#FCC;
+}
+DIV#ExportExcel-mainDiv DIV.droptrgt .concptDiv {
+	height:1px;
+	overflow:hidden;
+	background-color:#63758C;
+}
+DIV#ExportExcel-mainDiv #ExportExcel-DeleteMsg {
+	font-size:11px;
+	margin: 2px 0 0 90px;
+	display:none;
+}
+DIV#ExportExcel-mainDiv DIV.patDim {
+	padding: 6px 0px;
+	width:166px;
+	text-align:right;
+	float: left;
+	font-weight:bold;
+	color:#666;
+	margin: 15px 10px 0px 0px;
+}
+
+
+DIV#ExportExcel-mainDiv DIV.optionlbl {
+	padding: 6px 0px;
+	width:100px;
+	text-align:right;
+	float: left;
+	font-weight:bold;
+	color:#666;
+	margin: 15px 10px 0px 0px;
+}
+DIV#ExportExcel-mainDiv DIV.optionitems {
+	padding: 5px 10px;
+	background: #DEEBEF;
+	margin-top: 15px;
+	text-align:left;
+	/*border: 1px solid #63758C;*/
+	width:480px;
+	overflow:hidden;
+	white-space:nowrap;
+	display:block;
+	color:#000;
+	text-decoration:none;
+	white-space:nowrap;
+}
+/*DIV#ExportExcel-mainDiv DIV.optionitems:hover {
+	background-color:#FCC;
+}*/
+DIV#ExportExcel-mainDiv DIV.optionitems .optionitemdropbox {
+	width:420px;
+}
+
+
+DIV#ExportExcel-mainDiv DIV.optionitems .concptDiv {
+	height:1px; 
+	overflow:hidden;
+	background-color:#63758C;
+}
+
+
+
+DIV#ExportExcel-mainDiv DIV.outputOptions {
+	padding: 0;
+	/*background: #DEEBEF;*/
+	margin-top: 15px;
+	text-align:left;
+	border: 1px solid #63758C;
+	width:320px;
+	overflow:hidden;
+	white-space:nowrap;
+	
+	/*	
+	padding: 5px 10px;
+	margin-top: 15px;
+	text-align:left;
+	border: 1px solid #63758C;
+	width:200px;
+	overflow:hidden;
+	*/ 
+}
+DIV#ExportExcel-mainDiv DIV.outputOptions form {
+	margin:0;
+	padding:0;
+}
+DIV#ExportExcel-mainDiv DIV.outputOptions span {
+	margin-right: 15px;
+}
+
+
+
+/*** CSS for the View Results tab ***/
+
+DIV#ExportExcel-TABS DIV.results-directions {
+	padding: 10px;
+	text-align:left;
+}
+DIV#ExportExcel-TABS DIV.results-working {
+	margin:10px;
+	text-align:center;
+}
+DIV#ExportExcel-TABS DIV.results-working-hard {
+	margin:10px;
+	text-align:center;
+}
+DIV#ExportExcel-TABS DIV.results-text {
+	margin:10px;
+}
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO {
+	text-align:center;
+}
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO TABLE {
+	margin:10px 5px 5px 5px;
+	border-collapse:collapse;
+	width:97%;
+}
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO TABLE TH {
+	border:solid 1px #63758C;
+	background-color:#CEDBEF;
+	padding:5px;
+}
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO TABLE TD {
+	overflow:auto;
+	border:solid 1px #63758C;
+	background-color:#DEEBEF;
+	padding:5px;
+	text-align:center; 
+}
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO .instructionTable TABLE {
+	margin:10px 5px 0px 5px;
+	border:none;
+	width:97%;
+	text-align:center;
+}
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO .instructionTable TABLE TD {
+	background-color:#FFFFFF;
+	border:none;	
+	overflow:auto;
+	padding:5px;
+	text-align:left; 
+	vertical-align:top;
+}
+
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO .InfoPDO-Request {
+	padding:0px;
+}
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO .InfoPDO-Response {
+	padding:0px;
+}
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO .originalXML {
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+}
+DIV#ExportExcel-mainDiv DIV#ExportExcel-InfoPDO TABLE TD DIV PRE {
+	margin:0px;
+	left:5px;
+	right:5px;
+	display:block;
+	overflow:auto;
+	padding:5px;
+}
+
+
+/*** CSS for the Plugin Help tab ***/
+
+DIV#ExportExcel-TABS H1 {
+	margin:0 0 10px 0;
+	font-size:16px;
+	color:#42558C;
+	font-weight:bold;
+}
+DIV#ExportExcel-TABS H2 {
+	margin:10px 0 10px 0;
+	font-size:13px;
+	color:#42558C;
+	font-weight:bold;
+}
+DIV#ExportExcel-TABS HR {
+	margin:0;
+}

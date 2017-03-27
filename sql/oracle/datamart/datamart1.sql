@@ -1,0 +1,6 @@
+create tablespace "projectcode" nologging datafile '/data01/oradata/"projectcode".dbf'  size 256m autoextend on next 32m maxsize 4096m extent management local;
+CREATE USER I2B2MART"projectcode" IDENTiFIED BY somepass DEFAULT TABLESPACE "projectcode";
+GRANT RESOURCE, CONNECT, CREATE SESSION,CREATE DATABASE LINK TO I2B2MART"projectcode";
+INSERT INTO i2b2hive.crc_db_lookup( c_domain_id, c_project_path,c_owner_id, c_db_fullschema, c_db_datasource, c_db_servertype, c_db_nicename ) VALUES('i2b2demo','/"projectcode"/','@','i2b2mart"projectcode"','java:/QueryTool"projectcode"DS','ORACLE','"projectcode"');
+INSERT INTO i2b2hive.ont_db_lookup( c_domain_id, c_project_path,c_owner_id, c_db_fullschema, c_db_datasource, c_db_servertype, c_db_nicename ) VALUES('i2b2demo','"projectcode"/','@','i2b2mart"projectcode"','java:/Ontology"projectcode"DS','ORACLE','Mart"projectcode"');
+INSERT INTO i2b2hive.work_db_lookup( c_domain_id, c_project_path,c_owner_id, c_db_fullschema, c_db_datasource, c_db_servertype, c_db_nicename ) VALUES('i2b2demo','"projectcode"/','@','i2b2workdata','java:/WorkplaceDemoDS','ORACLE','Work"projectcode"');
